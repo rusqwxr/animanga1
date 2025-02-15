@@ -1,0 +1,123 @@
+/* Основные стили */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Темный фон для страницы */
+    color: white; /* Белый цвет текста для контраста */
+}
+
+/* Hero секция с фоновым изображением */
+.hero {
+    position: relative;
+    height: 100vh; /* Экранная высота */
+    background-image: url('IMG_7505.GIF'); /* Путь к твоей картинке */
+    background-size: cover; /* Растягиваем картинку на весь экран */
+    background-position: center; /* Центрируем картинку */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Заголовок на верх */
+.hero header {
+    position: absolute;
+    top: 20px; /* Расстояние от верхнего края */
+    left: 50%;
+    transform: translateX(-50%); /* Центрируем по горизонтали */
+    color: black;
+    text-align: center;
+    z-index: 1; /* Заголовок будет поверх других элементов */
+}
+
+/* Секция манги и аниме */
+.category {
+    text-align: center;
+    padding: 100px 20px; /* Увеличил отступы для длины секции */
+    background-color: #181818; /* Темный фон для секций */
+    margin-top: 40px; /* Расстояние между секциями */
+}
+
+/* Контент секции манги и аниме */
+.category-content {
+    background-color: #333; /* Темный фон для контента */
+    border-radius: 10px;
+    padding: 40px 20px; /* Увеличил внутренний отступ */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: 100%; /* Убедимся, что блок будет по ширине */
+    max-width: 1200px; /* Ограничим максимальную ширину */
+    margin: 0 auto; /* Центрируем контент */
+}
+
+/* Секции манги */
+.manga {
+    background-color: #181818; /* Темный фон */
+}
+
+/* Секции аниме */
+.anime {
+    background-color: #181818; /* Темный фон */
+    margin-top: 40px; /* Увеличил отступ между секциями */
+}
+
+/* Стили для контейнеров с ячейками */
+.manga-items, .anime-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Добавил промежуток между элементами */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Позволяет ячейкам адаптироваться под размер экрана */
+}
+
+/* Каждая ячейка с мангой или аниме */
+.manga-item, .anime-item {
+    background-color: #222; /* Темный фон для ячеек */
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%; /* Размер каждой ячейки */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.manga-item img, .anime-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Заголовки ячеек */
+.manga-item h3, .anime-item h3 {
+    margin-top: 15px;
+    font-size: 1.3rem; /* Увеличил размер шрифта */
+}
+
+/* Кнопки в секциях */
+.category-content button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 12px 30px; /* Увеличил размер кнопки */
+    font-size: 1.1rem; /* Увеличил шрифт */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.category-content button:hover {
+    background-color: #d45d41;
+}
+
+/* Стиль футера */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
